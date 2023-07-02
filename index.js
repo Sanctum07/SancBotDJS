@@ -1,4 +1,5 @@
 const tolkien = process.env['tokk']
+const keepAlive = require("./server");
 const {
   Client,
   GatewayIntentBits,
@@ -51,6 +52,8 @@ const pcommands = []
   })
 
 module.exports = client;
+
+keepAlive();
 
 client.login(tolkien).then(() => {
   loadEvents(client);
