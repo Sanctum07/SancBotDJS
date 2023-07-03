@@ -8,7 +8,7 @@ module.exports = {
 
     const slaver = process.env['id']
     const say = message.content.split(" ")
-    const content = say.slice(2).join(" ")
+    const content = say.slice(2).join(" ") || "No reason provided.";
     const embed = new EmbedBuilder()
 
     const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
