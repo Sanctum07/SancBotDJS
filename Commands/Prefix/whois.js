@@ -17,7 +17,7 @@ let target
     else
        {target = message.member}
     
-    
+    console.log(target)
             const embed = new EmbedBuilder()
     
     try{
@@ -25,7 +25,8 @@ let target
         const permissions = target.permissions.toArray();
         const sortedPermissionsArray = permissions.sort();
         const formattedPermissions = sortedPermissionsArray.join(', ');
-        const acknowledgements = permissions.includes('Administrator') ? 'Server Owner' : 'None' || permissions.includes('Administrator') ? 'Administrator' : 'None';
+        const acknowledgements =  permissions.includes('Administrator') ? 'Administrator' : 'None';
+      //permissions.includes('Administrator') ? 'Server Owner' : 'None' ||
         
         if (acknowledgements && acknowledgements.length > 1024) acknowledgements.slice(0, 10);
         if (formattedPermissions && formattedPermissions.length > 1024) formattedPermissions.slice(0, 10);
