@@ -18,10 +18,10 @@ module.exports = {
       return message.reply({ embeds: [embed] });}
 
     try {
-      member.kick().then(() => {
-        embed.setTitle(`${member} was kicked!`)
+      mem.kick().then(() => {
+        embed.setTitle(`${mem} was kicked!`)
         embed.setColor(0xFF0000)
-        message.channel.send({ embeds: [embed] })
+        return message.reply({ embeds: [embed] })
       })
     } catch(err){
             console.log(err);

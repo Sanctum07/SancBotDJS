@@ -49,11 +49,13 @@ module.exports = {
         embed.setDescription(`**Reason: **\n${Reason}`)
         embed.setColor(0xFF0000)
         message.author.send({ embeds: [embed] })
-        message.channel.send({ embeds: [embed] })
-    } catch (error) {
+        return message.reply({ embeds: [embed] })
+        
+    } catch (err) {
       console.log(err);
 
       embed.setColor("Red").setDescription("⛔ | Something went wrong...");
     }
+    return message.reply({ embeds: [embed] })
   }
 };

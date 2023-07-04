@@ -33,7 +33,7 @@ module.exports = {
         embed.setDescription(`**Reason: **\n${content}`)
         embed.setColor(0xFF0000)
         message.author.send({ embeds: [embed] })
-        message.channel.send({ embeds: [embed] })
+        return message.reply({ embeds: [embed] })
       })
     } catch (err) {
       console.log(err);
