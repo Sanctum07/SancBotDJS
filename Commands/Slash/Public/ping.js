@@ -7,8 +7,8 @@ const client = require('../../../index');
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("commands")
-    .setDescription("View the list of commands."),
+    .setName("ping")
+    .setDescription("Ping the bot."),
 
   async execute(interaction) {
     const { options, member, guild, channel } = interaction;

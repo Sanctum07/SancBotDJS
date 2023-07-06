@@ -17,7 +17,6 @@ let target
     else
        {target = message.member}
     
-    console.log(target)
             const embed = new EmbedBuilder()
     
     try{
