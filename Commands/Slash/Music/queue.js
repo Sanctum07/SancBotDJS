@@ -5,7 +5,8 @@ const client = require('../../../index');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName("queue")
-    .setDescription("View the song queue."),
+    .setDescription("View the song queue.")
+  .setDMPermission(false),
         
     async execute(interaction){
         const { options, member, guild, channel } = interaction;

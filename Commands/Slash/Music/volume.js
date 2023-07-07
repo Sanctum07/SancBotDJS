@@ -12,7 +12,9 @@ module.exports = {
             .setMinValue(1)
             .setMaxValue(100)
             .setRequired(true)
-    ),    
+    )
+  .setDMPermission(false),
+  
     async execute(interaction){
         const { member, guild, options } = interaction;
         const voiceChannel = member.voice.channel;

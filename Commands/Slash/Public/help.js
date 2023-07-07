@@ -10,7 +10,8 @@ const client = require('../../../index');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName("help")
-        .setDescription("View the list of commands."),
+        .setDescription("View the list of commands.")
+  .setDMPermission(false),
 
     async execute(interaction){
         const { options, member, guild, channel } = interaction;

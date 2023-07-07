@@ -5,7 +5,8 @@ const client = require('../../../index');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName("playing")
-    .setDescription("See the song that is playing now."),
+    .setDescription("See the song that is playing now.")
+  .setDMPermission(false),
         
     async execute(interaction){
         const { member, guild } = interaction;

@@ -5,7 +5,8 @@ const client = require('../../../index');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName("shuffle")
-    .setDescription("Turn on shuffle mode."),
+    .setDescription("Turn on shuffle mode.")
+  .setDMPermission(false),
         
     async execute(interaction){
         const { member, guild } = interaction;

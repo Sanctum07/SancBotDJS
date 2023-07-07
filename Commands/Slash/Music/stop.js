@@ -5,7 +5,8 @@ const client = require('../../../index');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName("stop")
-    .setDescription("Stop the bot."),
+    .setDescription("Stop the bot.")
+  .setDMPermission(false),
         
     async execute(interaction){
         const { member, guild } = interaction;

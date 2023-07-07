@@ -8,7 +8,8 @@ const client = require('../../../index');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("ping")
-    .setDescription("Ping the bot."),
+    .setDescription("Ping the bot.")
+  .setDMPermission(false),
 
   async execute(interaction) {
     const { options, member, guild, channel } = interaction;
@@ -32,7 +33,6 @@ module.exports = {
       embed.setColor("Red").setDescription("⛔ | Something went wrong...");
 
       return interaction.reply({ embeds: [embed], ephemeral: true });
-
     }
   }
 }

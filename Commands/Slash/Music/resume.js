@@ -5,7 +5,8 @@ const client = require('../../../index');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName("resume")
-    .setDescription("Resume music."),
+    .setDescription("Resume music.")
+  .setDMPermission(false),
         
     async execute(interaction){
         const { options, member, guild, channel } = interaction;

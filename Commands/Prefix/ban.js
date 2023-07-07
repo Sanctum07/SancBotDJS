@@ -1,4 +1,5 @@
 const { EmbedBuilder, PermissionsBitField } = require("discord.js");
+const slaver = process.env['id']
 
 
 module.exports = {
@@ -6,7 +7,6 @@ module.exports = {
   aliases: ["banish"],
   run: async (client, message, args) => {
 
-    const slaver = process.env['id']
     const say = message.content.split(" ")
     const content = say.slice(2).join(" ") || "No reason provided.";
     const embed = new EmbedBuilder()

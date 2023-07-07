@@ -11,7 +11,8 @@ module.exports = {
         .setDescription("Time in seconds to go back. (10 = 10s)")
         .setMinValue(0)
         .setRequired(true)
-    ),
+    )
+  .setDMPermission(false),
         
     async execute(interaction){
         const { member, guild, options } = interaction;

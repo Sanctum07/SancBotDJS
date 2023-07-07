@@ -10,7 +10,8 @@ module.exports = {
                 option.setName("search")
                     .setDescription("🔎 Enter a name or url for the song.")
                     .setRequired(true)
-    ),
+    )
+  .setDMPermission(false),
     async execute(interaction){
         const { options, member, guild, channel } = interaction;
 

@@ -15,7 +15,8 @@ module.exports = {
             { name: "queue", value: "queue" },
         )
         .setRequired(true)
-    ),
+    )
+  .setDMPermission(false),
         
     async execute(interaction){
         const { member, guild, options } = interaction;

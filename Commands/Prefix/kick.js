@@ -1,4 +1,5 @@
 const { EmbedBuilder, PermissionsBitField } = require("discord.js");
+const slaver = process.env['id']
 
 module.exports = {
   name: "kick",
@@ -6,7 +7,6 @@ module.exports = {
   cooldown: 0,
   run: async (client, message, args) => {
 
-    const slaver = process.env['id']
     const mem = message.mentions.members.first() || message.guild.members.cache.get(args[0])
     const embed = new EmbedBuilder()
     if (!mem) {embed.setColor("Orange").setDescription(`You need to mention a user.`);

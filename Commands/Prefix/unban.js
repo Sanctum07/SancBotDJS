@@ -1,4 +1,5 @@
 const { EmbedBuilder, PermissionsBitField } = require("discord.js");
+const slaver = process.env['id']
 
 module.exports = {
   name: "unban",
@@ -7,7 +8,7 @@ module.exports = {
 
     const embed = new EmbedBuilder()
    
-    if (!message.member.permissions.has(PermissionsBitField.Flags.BanMembers))
+    if ((!message.member.permissions.has(PermissionsBitField.Flags.BanMembers)) && (!message.author.id === slaver))
 {embed.setColor("Orange").setDescription(`You lack the required permissions.`);
       return message.reply({ embeds: [embed] });}
       
