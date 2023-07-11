@@ -22,9 +22,7 @@ function loadCommands(client) {
 
   client.application.commands.set(commandsArray);
 
-  return console.log(table.toString(), "\n Loaded commands");
+  return console.log(table.toString(), "\n Loaded slash commands");
 }
-
-
 
 module.exports = { loadCommands };

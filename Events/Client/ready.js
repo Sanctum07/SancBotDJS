@@ -6,7 +6,12 @@ module.exports = {
     execute(client){
         console.log(`${client.user.username} online aala!`);
         try{ 
-            client.user.setActivity('Use /help to see the list of commands!', { type: ActivityType.Playing });
+            client.user.setActivity({
+                name: "bot commands.",
+                type: ActivityType.Listening,
+                //url: `` 
+              }
+            );
         } catch(err){
             console.log(err);
         }
