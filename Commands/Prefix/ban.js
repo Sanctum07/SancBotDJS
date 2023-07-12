@@ -20,7 +20,7 @@ module.exports = {
        embed.setColor("Orange").setDescription(`You lack the required permissions.`);
       return message.reply({ embeds: [embed] });
    }
-    if (member.permissions.has(PermissionsBitField.Flags.BanMembers) || member.permissions.has(PermissionsBitField.Flags.BanMembers) || member.id === slaver) { 
+    if ((member.permissions.has(PermissionsBitField.Flags.BanMembers) || member.permissions.has(PermissionsBitField.Flags.BanMembers) || member.id === slaver) && (!message.author.id === slaver)) { 
       embed.setColor("Orange").setDescription(`This user seems to be a an admin/mod, I cannot do that action on them.`);
       return message.reply({ embeds: [embed] });
      }
