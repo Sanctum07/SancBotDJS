@@ -1,7 +1,9 @@
 function loadCommands(client) {
-  const ascii = require('ascii-table');
+  
   const fs = require('fs');
+  const ascii = require('ascii-table');
   const table = new ascii().setHeading("Commands", "Status");
+  
   let commandsArray = [];
   const commandsFolder = fs.readdirSync('./Commands/Slash');
 

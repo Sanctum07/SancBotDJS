@@ -11,7 +11,7 @@ module.exports = {
     .setDescription("Ping the bot.")
   .setDMPermission(false),
 
-  async execute(interaction) {
+  async run(interaction) {
     const { options, member, guild, channel } = interaction;
     const embed = new EmbedBuilder();
     try {

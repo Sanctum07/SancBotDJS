@@ -12,7 +12,7 @@ module.exports = {
                     .setRequired(true)
     )
   .setDMPermission(false),
-    async execute(interaction){
+    async run(interaction){
         const { options, member, guild, channel } = interaction;
 
         const query = options.getString("search");

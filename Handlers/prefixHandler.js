@@ -1,11 +1,10 @@
 function loadpCommands(client) {
 
   const fs = require("fs")
-  const pcommands = []
-
   const ascii = require('ascii-table');
   const table = new ascii().setHeading("Commands", "Status");
 
+  const pcommands = []
   const commandFiles = fs.readdirSync(`./Commands/Prefix`).filter((file) => file.endsWith('.js'));
   for (const file of commandFiles) {
     const command = require(`../Commands/Prefix/${file}`);

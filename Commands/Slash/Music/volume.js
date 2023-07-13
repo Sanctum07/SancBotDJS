@@ -15,7 +15,7 @@ module.exports = {
     )
   .setDMPermission(false),
   
-    async execute(interaction){
+    async run(interaction){
         const { member, guild, options } = interaction;
         const voiceChannel = member.voice.channel;
         const volume = options.getInteger("percentage");

@@ -12,6 +12,6 @@ module.exports = {
             interaction.reply({content: "deprecated command!"});
         }
 
-        command.execute(interaction, client);
+        command.run(interaction, client);
     },
 };

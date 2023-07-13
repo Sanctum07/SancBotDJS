@@ -8,7 +8,7 @@ module.exports = {
     .setDescription("View the song queue.")
   .setDMPermission(false),
         
-    async execute(interaction){
+    async run(interaction){
         const { options, member, guild, channel } = interaction;
         const voiceChannel = member.voice.channel;
 

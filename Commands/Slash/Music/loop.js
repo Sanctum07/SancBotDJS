@@ -18,7 +18,7 @@ module.exports = {
     )
   .setDMPermission(false),
         
-    async execute(interaction){
+    async run(interaction){
         const { member, guild, options } = interaction;
         const option = options.getString("options");
         const voiceChannel = member.voice.channel;

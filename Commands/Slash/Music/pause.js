@@ -8,7 +8,7 @@ module.exports = {
     .setDescription("Pause the music.")
   .setDMPermission(false),
         
-    async execute(interaction){
+    async run(interaction){
         const { member, guild } = interaction;
 
         const voiceChannel = member.voice.channel;

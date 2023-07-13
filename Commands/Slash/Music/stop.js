@@ -8,7 +8,7 @@ module.exports = {
     .setDescription("Stop the bot.")
   .setDMPermission(false),
         
-    async execute(interaction){
+    async run(interaction){
         const { member, guild } = interaction;
         const voiceChannel = member.voice.channel;
 

@@ -8,7 +8,7 @@ module.exports = {
     .setDescription("Turn on shuffle mode.")
   .setDMPermission(false),
         
-    async execute(interaction){
+    async run(interaction){
         const { member, guild } = interaction;
         const voiceChannel = member.voice.channel;
 
